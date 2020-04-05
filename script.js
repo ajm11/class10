@@ -14,7 +14,7 @@ window.onload = async function(){
         let formInput = document.getElementById("inputForm").value;
         let r = await fetch('https://www.reddit.com/r/'+ formInput +'/.json');
         let responseJSON = await r.json();
-        console.log(responseJSON.data.children);
+        
           for(post of responseJSON.data.children) {
             let header = document.createElement('h3');
             let anchor = document.createElement('a');
